@@ -5,19 +5,19 @@ const UserModel=require('./models/Users')
 const EmployeeModel=require('./models/Employee')
 
 const app=express();
-
-app.use(cors({
-    origin:"*",
-    methods:["POST","GET"],
-    credentials:true
-}))
+app.use(cors())
+// app.use(cors({
+//     origin:"*",
+//     methods:["POST","GET"],
+//     credentials:true
+// }))
 app.use(express.json())
 
 mongoose.connect("mongodb+srv://kommurujayakrishna:RG2jmyieNW7Y1umL@cluster0.2c7ak1e.mongodb.net/?retryWrites=true&w=majority")
 
-app.get('/',(req,res)=>{
-    res.json("Hello World")
-})
+// app.get('/',(req,res)=>{
+//     res.json("Hello World")
+// })
 
 app.get('/users',(req,res)=>{
     UserModel.find({})
