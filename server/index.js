@@ -13,6 +13,10 @@ app.use(express.json())
 
 mongoose.connect("mongodb+srv://kommurujayakrishna:RG2jmyieNW7Y1umL@cluster0.2c7ak1e.mongodb.net/?retryWrites=true&w=majority")
 
+app.get('/',(req,res)=>{
+    res.json("Hello World")
+})
+
 app.get('/users',(req,res)=>{
     UserModel.find({})
     .then(users=>res.json(users))
