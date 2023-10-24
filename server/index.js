@@ -11,7 +11,7 @@ app.use(cors({
 }))
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://kommurujayakrishna:RG2jmyieNW7Y1umL@cluster0.2c7ak1e.mongodb.net/crud?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://kommurujayakrishna:RG2jmyieNW7Y1umL@cluster0.2c7ak1e.mongodb.net/?retryWrites=true&w=majority")
 
 app.get('/users',(req,res)=>{
     UserModel.find({})
