@@ -5,7 +5,12 @@ const UserModel=require('./models/Users')
 const EmployeeModel=require('./models/Employee')
 
 const app=express();
-app.use(cors())
+
+app.use(cors({
+    origin:[""],
+    methods:["POST","GET"],
+    credentials:true
+}))
 app.use(express.json())
 
 mongoose.connect("mongodb://127.0.0.1:27017/crud")
