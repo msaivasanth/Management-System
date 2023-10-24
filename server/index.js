@@ -7,7 +7,7 @@ const EmployeeModel=require('./models/Employee')
 const app=express();
 
 app.use(cors({
-    origin:["https://management-system.vercel.app"],
+    origin:["*"],
     methods:["POST","GET"],
     credentials:true
 }))
