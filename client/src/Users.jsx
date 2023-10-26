@@ -10,7 +10,7 @@ function Users() {
     }, [])
     
     const handleDelete=(id)=>{
-        axios.delete("http://localhost:3001/deleteUser/"+id)
+        axios.delete("https://master--comfy-muffin-b5bef7.netlify.app/deleteUser/"+id)
         .then(res=>{
             console.log(res)
             window.location.reload()
